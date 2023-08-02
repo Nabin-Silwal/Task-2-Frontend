@@ -1,0 +1,31 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+span {
+  flex: 1;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c82333;
+}

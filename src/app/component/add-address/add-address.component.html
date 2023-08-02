@@ -1,0 +1,16 @@
+<h2>Add Address</h2>
+<form (ngSubmit)="onAddAddressSubmit()">
+    <div>
+        <label for="walletId">Wallet ID:</label>
+        <input type="text" name="walletId" [(ngModel)]="formData.walletId" required>
+    </div>
+
+    <div>
+        <label for="address">Address:</label>
+        <input type="text" name="address" [(ngModel)]="formData.address" required>
+    </div>
+
+    <div>
+        <button type="submit">Add Address</button>
+    </div>
+</form>

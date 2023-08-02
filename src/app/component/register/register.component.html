@@ -1,0 +1,32 @@
+<h2>Register</h2>
+<form (submit)="onRegisterSubmit()">
+    <div>
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="formData.name" name="name" required>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="formData.email" name="email" required>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" [(ngModel)]="formData.password" name="password" required>
+    </div>
+    <div>
+        <label>Contact:</label>
+        <input type="text" [(ngModel)]="formData.contact" name="contact">
+    </div>
+    <div>
+        <label>Gender:</label>
+        <select [(ngModel)]="formData.gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div>
+        <label>Age:</label>
+        <input type="number" [(ngModel)]="formData.age" name="age">
+    </div>
+    <button type="submit">Register</button>
+</form>

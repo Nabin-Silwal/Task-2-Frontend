@@ -1,0 +1,15 @@
+<h2>Edit Address</h2>
+<form (ngSubmit)="onEditAddressSubmit()">
+    <div>
+        <label for="name">walletId:</label>
+        <input type="text" name="name" [(ngModel)]="address.walletId" required>
+    </div>
+    <div>
+        <label for="address">Address:</label>
+        <input type="text" name="address" [(ngModel)]="address.address" required>
+    </div>
+
+    <div>
+        <button type="submit">Update Address</button>
+    </div>
+</form>

@@ -1,0 +1,35 @@
+<div class="container">
+    <button class="mt-3" routerLink="/historical-data-chart">Historical Data Chart</button>
+    <button class="m-3" color="secondary" routerLink="/add-address">Add User Address</button>
+</div>
+
+<h2>User Addresses</h2>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Wallet ID</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let address of userAddresses; let i = index">
+                <td>{{ address.walletId }}</td>
+                <td>{{ address.address }}</td>
+                <td>
+                    <button class="ml-2" (click)="onEditAddress(address, i)">Edit</button>
+                    <button class="m-2" (click)="onDeleteAddress(address.walletId)">Delete</button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-edit-address *ngIf="selectedAddressIndex !== -1" [address]="userAddresses[selectedAddressIndex]"
+    (addressUpdated)="onAddressUpdated($event)"></app-edit-address>
+
+
+<!-- 
+<app-edit-address *ngIf="selectedAddress" [address]="selectedAddress"></app-edit-address> -->
